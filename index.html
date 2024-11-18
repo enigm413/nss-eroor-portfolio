@@ -20,25 +20,45 @@
       <img src="Images/logo.png" alt="NSS Logo" class="logo-image" />
       <nav class="nav-link-wrapper">
         <ul class="nav-links">
-          <li><a href="#" class="nav-link">Home</a></li>
+          <li>
+            <a href="#" class="nav-link">Home</a>
+          </li>
+
           <li class="drop-down">
-            <a href="#" class="nav-link"
-              ><span>About Us</span>
-              <span
-                ><ion-icon
-                  name="caret-down-outline"
-                  class="nav-link-icon"
-                ></ion-icon></span
-            ></a>
+            <a href="#" class="nav-link">
+              <span>About Us</span>
+              <span>
+                <ion-icon name="caret-down-outline" class="nav-link-icon">
+                </ion-icon>
+              </span>
+            </a>
+
             <ul class="drop-down-links">
-              <li><a href="#" class="nav-link">Our Vision</a></li>
-              <li><a href="#" class="nav-link">Our Journey</a></li>
-              <li><a href="#" class="nav-link">Contact Us</a></li>
+              <li>
+                <a href="#section-vision" class="nav-link">Our Vision</a>
+              </li>
+
+              <li>
+                <a href="#section-journey" class="nav-link">Our Journey</a>
+              </li>
+
+              <li>
+                <a href="#section-contact" class="nav-link">Contact Us</a>
+              </li>
             </ul>
           </li>
-          <li><a href="#" class="nav-link">User Registration</a></li>
-          <li><a href="#" class="nav-link">Gallery</a></li>
-          <li><a href="#" class="nav-link">Upcoming Event</a></li>
+
+          <li>
+            <a href="user-registration" class="nav-link">User Registration</a>
+          </li>
+
+          <li>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="upcoming-event.html" class="nav-link">Upcoming Event</a>
+          </li>
         </ul>
         <button class="login-btn">Admin Login</button>
       </nav>
@@ -54,7 +74,7 @@
       </div>
     </section>
 
-    <section class="section-vision">
+    <section class="section-vision" id="section-vision">
       <div class="wrapper">
         <h2 class="heading--secondary">Our Vision</h2>
         <p class="vision-intro-text">
@@ -101,12 +121,21 @@
             />
 
             <img
-              src="Images/NSS-Building.jpg"
+              src="Images/Journey/journey-6.jpg"
               alt="Building of NSS"
               class="nss-image"
             />
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section-journey" id="section-journey">
+      <div class="wrapper">
+        <h2 class="heading--secondary">Our Journey</h2>
+      </div>
+      <div class="wrapper">
+        <ol class="journey-list-wrapper"></ol>
       </div>
     </section>
 
@@ -119,5 +148,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script type="module" src="index.js"></script>
   </body>
 </html>

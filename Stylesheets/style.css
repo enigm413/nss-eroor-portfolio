@@ -200,3 +200,55 @@
   width: 100%;
   border-radius: 1.6rem;
 }
+
+/***********************************/
+/**********SECTION-JOURNEY**********/
+/***********************************/
+
+.section-journey {
+  padding: 12.8rem 0;
+}
+
+.journey-list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+}
+
+.journey-item-wrapper {
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.9);
+  padding: 3.6rem;
+  border-radius: 2rem;
+}
+
+.journey-text-wrapper {
+  padding: 0 0.8rem;
+}
+
+.journey-year {
+  font-size: 4.8rem;
+  font-weight: 700;
+  padding-bottom: 1.2rem;
+  color: #db9a9a;
+}
+
+.journey-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding-bottom: 1.6rem;
+}
+
+.journey-description {
+  font-size: 1.9rem;
+  line-height: 1.7;
+  padding-bottom: 1.9rem;
+}
+
+.journey-image {
+  width: 100%;
+  border-radius: 2rem;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
