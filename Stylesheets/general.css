@@ -19,7 +19,7 @@ body {
 .wrapper {
   max-width: 128rem;
   margin: 0 auto;
-  padding-bottom: 6.4rem;
+  padding-bottom: 4.8rem;
 }
 
 .heading--primary {
@@ -35,4 +35,8 @@ body {
   padding-bottom: 3.2rem;
   text-align: center;
   color: #a60303;
+}
+
+.display--none {
+  display: none;
 }

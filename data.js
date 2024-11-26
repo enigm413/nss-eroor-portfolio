@@ -12,7 +12,7 @@ export const journeyData = [
     year: "1963",
     title: "എരൂർ NSS കരയോഗം സ്ഥാപിതം",
     description:
-      "കണ്ണിക്കത്ത് ശ്രീ കൊച്ചു ഗോവിന്ദ മേനോന്റെ നേതൃത്വത്തിലുള്ള യോഗത്തിൽ ഏരൂർ നായർ യുവജനസമാജത്തെ NSS-ലിൽ ലയിപ്പിക്കാൻ തീരുമാനിച്ചു. പിന്നീട് ശ്രീ ആലപ്പാട്ട് സി.എ.എസ്. മേനോന്റെ നേതൃത്വത്തിൽ 18 അംഗ സംഘം കരയോഗം രജിസ്റ്റർ ചെയ്തു. തുടർന്ന്, NSS ഇൻസ്‌പെക്ടർ ആർ. രവീന്ദ്രനാഥൻ നായരുടെ ശുപാർശ പ്രകാരം 2565)o നമ്പർ എരൂർ എൻ.എസ്.എസ് കരയോഗം നിലവിൽ വന്നു.",
+      "കണ്ണിക്കത്ത് ശ്രീ കൊച്ചു ഗോവിന്ദ മേനോന്റെ നേതൃത്വത്തിലുള്ള യോഗത്തിൽ ഏരൂർ നായർ യുവജനസമാജത്തെ NSS-ലിൽ ലയിപ്പിക്കാൻ തീരുമാനിച്ചു. പിന്നീട് ശ്രീ ആലപ്പാട്ട് സി.എ.എസ്. മേനോന്റെ നേതൃത്വത്തിൽ 18 അംഗ സംഘം കരയോഗം രജിസ്റ്റർ ചെയ്തു. തുടർന്ന്, NSS ഇൻസ്‌പെക്ടർ ആർ. രവീന്ദ്രനാഥൻ നായരുടെ ശുപാർശ പ്രകാരം 2565)o നമ്പർ എരൂർ NSS കരയോഗം രൂപീകരിച്ചു.",
     imageFileName: "journey-2.jpg",
     imageAlternateText: "Handshake between 2 person",
   },
@@ -82,7 +82,7 @@ export const journeyData = [
     year: "2013",
     title: "വനിതാ സമാജം മന്ദിര നിർമ്മാണം.",
     description:
-      "ചിട്ടി നടത്തിപ്പിലൂടെ ലഭിച്ച പണം വിനിയോഗിച്ച് വനിതാ സമാജം 5 സെന്റ് സ്ഥലം സ്വന്തമാക്കി. തുടർന്ന്, വനിതാ സമാജത്തിന്റെ മന്ദിര നിർമാണ പ്രവർത്തനങ്ങൾ ആരംഭിച്ചു.",
+      "ചിട്ടി നടത്തിപ്പിലൂടെ ലഭിച്ച പണം വിനിയോഗിച്ച് വനിതാ സമാജം 5 സെന്റ് സ്ഥലം സ്വന്തമാക്കി. തുടർന്ന്, വനിതാ സമാജത്തിന്റെ മന്ദിര നിർമാണ പ്രവർത്തനങ്ങൾ ആരംഭിച്ചു. ഒരു വർഷത്തിനുളളിൽ വനിതാ സമാജത്തിന്റെ ആസ്ഥാന മന്ദിരവും ഉദ്‌ഘാടനം ചെയ്തു.",
     imageFileName: "journey-10.jpg",
   },
 
@@ -90,7 +90,7 @@ export const journeyData = [
     year: "2013 - 2014",
     title: "സുവർണ്ണ ജൂബിലി ആഘോഷം",
     description:
-      "NSS ന്റെ ഒരു വർഷം നീണ്ടുനിന്ന സുവർണ്ണ ജൂബിലി ആഘോഷങ്ങൾ വിവിധ കലാപരിപാടികളോടെ നടന്നു. വനിതാ സമാജത്തിന്റെ ആസ്ഥാന മന്ദിരവും ഉദ്‌ഘാടനം ചെയ്തു.",
+      "NSS ന്റെ ഒരു വർഷം നീണ്ടുനിന്ന സുവർണ്ണ ജൂബിലി ആഘോഷങ്ങൾ വിവിധ കലാപരിപാടികളോടെ നടന്നു. സുവർണ ജൂബിലിയോട് അനുബന്ദിച്ച് ഒരു സുവനീർ പ്രസിധീകരിച്ചു. കേരളം അങ്ങോളം ഇങ്ങോളം അറിയപെടുന്ന പ്രമുഖർ സുവനീറിൻ്റെ താളുകളിൽ നിറഞ്ഞു നിന്നു",
     imageFileName: "journey-11.jpg",
     imageAlternateText: "News Article about Golden Jublee",
   },
@@ -102,5 +102,420 @@ export const journeyData = [
       "NSS ന്റെ പ്ലാറ്റിനം ജൂബിലി ഒരു വർഷം നീണ്ട് നിൽക്കുന്ന പരിപാടികളോടെ ആഘോഷിച്ചു. ഇന്ന് എരൂരിന്റെ സാംസ്‌കാരിക സാമൂഹിക രംഗത്ത് മാറ്റി നിർത്തപ്പെടാനാകാത്ത ഒരു സംഘടനയായി എരൂർ NSS 2565 നമ്പർ കരയോഗം ഉയർന്നു നിൽക്കുന്നു.",
     imageFileName: "journey-12.jpg",
     imageAlternateText: "Platinum Jublee inn",
+  },
+];
+
+export const teamMembersData = [
+  {
+    id: "1225",
+    name: "K A Unnithan",
+    role: "President",
+    team: "Executive Committee",
+    phoneNumber: "9567553373",
+    imageFileName: "member-1.png",
+  },
+
+  {
+    id: "2859",
+    name: "Ramachandran",
+    role: "Secretary",
+    team: "Executive Committee",
+    phoneNumber: "8129129144",
+    imageFileName: "member-2.png",
+  },
+
+  {
+    id: "456",
+    name: "Vinod Kannikath",
+    role: "Tresurer",
+    team: "Executive Committee",
+    phoneNumber: "9388505168",
+    imageFileName: "member-3.png",
+  },
+
+  {
+    id: "901",
+    name: "Anoop G Menon",
+    role: "Vice President",
+    team: "Executive Committee",
+    phoneNumber: "9895717133",
+    imageFileName: "member-4.png",
+  },
+
+  {
+    id: "998",
+    name: "Rajendran Kedharam",
+    role: "Joint Secretary",
+    team: "Executive Committee",
+    phoneNumber: "984703750",
+    imageFileName: "member-5.png",
+  },
+
+  {
+    id: "1761",
+    name: "VenuGopalan E G",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9400779179",
+    imageFileName: "member-6.png",
+  },
+
+  {
+    id: "593",
+    name: "Radhakrishnan",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9567269644",
+    imageFileName: "member-7.png",
+  },
+
+  {
+    id: "2166",
+    name: "Ajith Kumar",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9447235740",
+    imageFileName: "member-8.png",
+  },
+
+  {
+    id: "1124",
+    name: "Murali M K",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9400979688",
+    imageFileName: "member-9.png",
+  },
+
+  {
+    id: "1092",
+    name: "Thankappan Pilla",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "8281637751",
+    imageFileName: "member-10.png",
+  },
+
+  {
+    id: "1676",
+    name: "Shyama Prasad",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9446720602",
+    imageFileName: "member-11.png",
+  },
+
+  {
+    id: "902",
+    name: "Anil Kumar",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9495819230",
+    imageFileName: "member-12.png",
+  },
+
+  {
+    id: "2720",
+    name: "Mohanan",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9633916085",
+    imageFileName: "member-13.png",
+  },
+
+  {
+    id: "2135",
+    name: "K A Venu",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9447498210",
+    imageFileName: "member-14.png",
+  },
+
+  {
+    id: "2764",
+    name: "Girish",
+    role: "Commitee Member",
+    team: "Executive Committee",
+    phoneNumber: "9947269739",
+    imageFileName: "member-15.png",
+  },
+
+  {
+    id: "1188",
+    name: "P K Vasanth Kumari",
+    role: "President",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9037049674",
+    imageFileName: "member-16.png",
+  },
+
+  {
+    id: "265",
+    name: "Jalaja Vinod",
+    role: "Secretary",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "8137815977",
+    imageFileName: "member-17.png",
+  },
+
+  {
+    id: "1348",
+    name: "Usha Menon",
+    role: "Tresurer",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9895083588",
+    imageFileName: "member-18.png",
+  },
+
+  {
+    id: "1238",
+    name: "Devi Soman",
+    role: "Vice President",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9746822996",
+    imageFileName: "member-19.png",
+  },
+
+  {
+    id: "2068",
+    name: "Jaya Rajan",
+    role: "Joint Secretary",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9562765311",
+    imageFileName: "member-20.png",
+  },
+
+  {
+    id: "956",
+    name: "Sunantha Bhaskaran",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9400175974",
+    imageFileName: "member-21.png",
+  },
+
+  {
+    id: "671",
+    name: "Kanakam Rajan",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9496637906",
+    imageFileName: "member-22.png",
+  },
+
+  {
+    id: "1177",
+    name: "Vanisree Vijayakumar",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9446517895",
+    imageFileName: "member-23.png",
+  },
+
+  {
+    id: "2102",
+    name: "Lathika S Menon",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9895879798",
+    imageFileName: "member-24.png",
+  },
+
+  {
+    id: "949",
+    name: "Rajeshwari Sudevan",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9895276218",
+    imageFileName: "member-25.png",
+  },
+
+  {
+    id: "1296",
+    name: "K V Regha",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "8289889991",
+    imageFileName: "member-26.png",
+  },
+
+  {
+    id: "3428",
+    name: "Sindhu Sajeevan",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9847049460",
+    imageFileName: "member-27.png",
+  },
+
+  {
+    id: "996",
+    name: "Shanthi RamaChandran",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9995852725",
+    imageFileName: "member-28.png",
+  },
+
+  {
+    id: "3116",
+    name: "Latha V S",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9349278497",
+    imageFileName: "member-29.png",
+  },
+
+  {
+    id: "2563",
+    name: "K G Meenakumari",
+    role: "Commitee Member",
+    team: "Vanitha Samajam Committee",
+    phoneNumber: "9847827523",
+    imageFileName: "member-30.png",
+  },
+
+  {
+    id: "1092",
+    name: "Thankappan Pilla",
+    role: "Convenor Central Zone",
+    team: "Regional Committee",
+    phoneNumber: "8281637751",
+    imageFileName: "member-10.png",
+  },
+
+  {
+    id: "3428",
+    name: "Sindhu Sajeevan",
+    role: "Convenor North Zone",
+    team: "Regional Committee",
+    phoneNumber: "9847049460",
+    imageFileName: "member-27.png",
+  },
+
+  {
+    id: "2227",
+    name: "Unnikrishnan Nair",
+    role: "Convenor East Zone",
+    team: "Regional Committee",
+    phoneNumber: "8281422207",
+    imageFileName: "member-31.png",
+  },
+
+  {
+    id: "2855",
+    name: "Chandrashekaran",
+    role: "Convenor West Zone",
+    team: "Regional Committee",
+    phoneNumber: "9495314954",
+    imageFileName: "member-32.png",
+  },
+
+  {
+    id: "BALA-01",
+    name: "Arjun P Menon",
+    role: "President",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9895133335",
+    imageFileName: "member-33.png",
+  },
+
+  {
+    id: "BALA-02",
+    name: "Meenakshi",
+    role: "Secretary",
+    team: "Bala Samajam Committee",
+    phoneNumber: "8330057742",
+    imageFileName: "member-34.png",
+  },
+
+  {
+    id: "BALA-03",
+    name: "Aditi Menon",
+    role: "Vice President",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9142168100",
+    imageFileName: "member-35.png",
+  },
+
+  {
+    id: "BALA-04",
+    name: "Saayuj J Menon",
+    role: "Vice President",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9074434716",
+    imageFileName: "member-36.png",
+  },
+
+  {
+    id: "BALA-05",
+    name: "Gauri Parvathy",
+    role: "Joint Secretary",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9496932168",
+    imageFileName: "member-37.png",
+  },
+
+  {
+    id: "BALA-06",
+    name: "Ameya",
+    role: "Joint Secretary",
+    team: "Bala Samajam Committee",
+    phoneNumber: "7736149047",
+    imageFileName: "member-38.png",
+  },
+
+  {
+    id: "BALA-07",
+    name: "Kalyani P Menon",
+    role: "Committee Member",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9895133335",
+    imageFileName: "member-39.png",
+  },
+
+  {
+    id: "BALA-08",
+    name: "Arpita Menon",
+    role: "Committee Member",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9142168100",
+    imageFileName: "member-40.png",
+  },
+
+  {
+    id: "BALA-09",
+    name: "Navaneeth Krishna",
+    role: "Committee Member",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9496932168",
+    imageFileName: "member-41.png",
+  },
+
+  {
+    id: "BALA-10",
+    name: "Krishnaja",
+    role: "Committee Member",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9895918529",
+    imageFileName: "member-42.png",
+  },
+
+  {
+    id: "BALA-11",
+    name: "Anand",
+    role: "Committee Member",
+    team: "Bala Samajam Committee",
+    phoneNumber: "9447152869",
+    imageFileName: "member-43.png",
+  },
+  {
+    id: "BALA-12",
+    name: "Malavika",
+    role: "President",
+    team: "Bala Samajam Committee",
+    phoneNumber: "8138090943",
+    imageFileName: "member-44.png",
   },
 ];

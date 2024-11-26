@@ -221,10 +221,9 @@
   box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.9);
   padding: 3.6rem;
   border-radius: 2rem;
-}
-
-.journey-text-wrapper {
-  padding: 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .journey-year {
@@ -251,4 +250,224 @@
   border-radius: 2rem;
   aspect-ratio: 3/2;
   object-fit: cover;
+}
+
+/***********************************/
+/**********SECTION-CONTACT**********/
+/***********************************/
+
+.section-contacts {
+  padding: 12.8rem 0;
+  background-color: #f6e6e6;
+}
+
+.sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.team {
+  padding: 4.8rem;
+  border-radius: 2rem;
+  position: relative;
+  background-color: #fff;
+}
+
+.team-name {
+  font-size: 2.3rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  padding-bottom: 3.2rem;
+}
+
+.profile-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.2rem;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.9);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  display: block;
+}
+
+.profile-image-wrapper {
+  background: #d03923;
+  padding: 25% 0;
+  position: relative;
+}
+
+.profile-image {
+  display: inline-block;
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 59%;
+  object-position: center 0.02px;
+  object-fit: cover;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  padding: 0.4rem;
+  box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.3);
+}
+
+.profile-text-wrapper {
+  padding: 8rem 0 4.8rem 0;
+}
+
+.profile-name {
+  font-size: 2.3rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.profile-role {
+  font-size: 1.9rem;
+  font-weight: 600;
+  padding-bottom: 2.4rem;
+}
+
+.profile-contact:link,
+.profile-contact:visited {
+  background-color: #d03923;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+  border-radius: 0.8rem;
+}
+
+.profile-contact:hover,
+.profile-contact:active {
+  background-color: #af1c1c;
+  color: #fff;
+}
+
+.slider-btn {
+  font-size: 4.8rem;
+  color: #d03923;
+  border: none;
+  z-index: 1;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.slider-btn:hover {
+  color: #af1c1c;
+  cursor: pointer;
+}
+
+.left-btn {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  top: 50%;
+}
+
+.right-btn {
+  position: absolute;
+  right: 0;
+  transform: translateX(50%);
+  top: 50%;
+}
+
+/***********************************/
+/**********SECTION-FOOTER**********/
+/***********************************/
+
+.section-footer {
+  padding: 12.8rem 0 0rem 0;
+}
+
+.section-footer .wrapper {
+  max-width: 96rem;
+}
+
+.footer-contents {
+  display: grid;
+  grid-template-columns: 0.7fr 0.5fr 0.5fr;
+  column-gap: 2.4rem;
+  row-gap: 4.8rem;
+  align-items: start;
+}
+
+.footer-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-image {
+  width: 9.6rem;
+  height: 9.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0.2rem rgba(17, 0, 0, 0.9);
+}
+
+.footer-image-description {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.footer-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.copy-wrapper {
+  grid-column: span 3;
+}
+
+.copy {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: #d03923;
+}
+
+.footer-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  color: #110000;
+}
+
+.footer-link:hover,
+.drop-down:active {
+  color: #d03923;
 }
