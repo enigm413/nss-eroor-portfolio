@@ -19,7 +19,7 @@ body {
 .wrapper {
   max-width: 128rem;
   margin: 0 auto;
-  padding-bottom: 4.8rem;
+  padding-bottom: 6.4rem;
 }
 
 .heading--primary {
@@ -38,5 +38,9 @@ body {
 }
 
 .display--none {
-  display: none;
+  display: none !important;
+}
+
+.display--flex {
+  display: flex !important;
 }

@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   gap: 3.2rem;
+  margin-left: auto;
 }
 
 .nav-links {
@@ -89,6 +90,23 @@
   background-color: #af1c1c;
 }
 
+.menu-btn {
+  border: none;
+  background-color: #d03923;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.1rem;
+  font-size: 4rem;
+  font-weight: 700;
+  border-radius: 1.2rem;
+  display: none;
+}
+
+.close-icon,
+.menu-icon {
+  display: block;
+}
+
 /**************************************/
 /************ SECTION HERO ************/
 /**************************************/
@@ -96,13 +114,12 @@
 .section-hero {
   padding: 9.6rem 0;
   background-image: linear-gradient(
-      rgba(78, 91, 166, 0.6),
-      rgba(166, 3, 3, 0.5)
+      rgba(78, 91, 166, 0.4),
+      rgba(166, 3, 3, 0.6)
     ),
-    url(../Images/hero-image.jpg);
+    url(../Images/hero-image-large.webp);
   background-size: cover;
   background-position: top;
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -112,7 +129,7 @@
 .hero-wrapper {
   text-align: center;
   max-width: 80rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero-description {
@@ -126,7 +143,7 @@
 /**********************************/
 
 .section-vision {
-  padding: 12.8rem 0;
+  padding: 12.8rem 4.8rem;
   background-color: #f6e6e6;
 }
 
@@ -139,20 +156,19 @@
 
 .vision-wrapper {
   display: grid;
-  grid-template-columns: 45fr 55fr;
-  gap: 3.6rem;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4.8rem;
 }
 
 .founder-image-wrapper {
   text-align: center;
   overflow: hidden;
-  width: 70%;
+  width: 75%;
   box-shadow: 0 0 0.8rem #af1c1c;
   border-radius: 2rem;
   padding: 2.4rem;
   background-color: #fff;
-  align-self: center;
-  align-self: flex-end;
+  justify-self: end;
 }
 
 .founder-image {
@@ -162,9 +178,12 @@
 }
 
 .founder-name {
-  font-size: 2rem;
+  font-size: 1.9rem;
+  line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
   padding: 1.6rem;
 }
 
@@ -176,27 +195,28 @@
 .founder-quotes {
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 2.4rem;
+  align-self: center;
 }
 
 .founder-quote {
   font-size: 1.9rem;
   font-weight: 400;
-  line-height: 1.5;
-  padding: 2.4rem 4.8rem;
+  line-height: 1.6;
+  padding: 2.4rem;
   background-color: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.9);
 }
 
-.nss-image-wrapper {
-  border-radius: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3.6rem;
+.vision-images {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2.4rem;
 }
 
-.nss-image {
+.vision-image {
   width: 100%;
   border-radius: 1.6rem;
 }
@@ -206,24 +226,27 @@
 /***********************************/
 
 .section-journey {
-  padding: 12.8rem 0;
+  padding: 12.8rem 4.8rem;
 }
 
 .journey-list-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
 
 .journey-item-wrapper {
   list-style: none;
   background-color: #fff;
-  box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.9);
-  padding: 3.6rem;
+  box-shadow: 0 0 0.8rem rgba(17, 0, 0, 0.2);
+  padding: 3.2rem;
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: sticky;
+  top: 2.4rem;
 }
 
 .journey-year {
@@ -235,6 +258,7 @@
 
 .journey-title {
   font-size: 2.8rem;
+  line-height: 1.3;
   font-weight: 700;
   padding-bottom: 1.6rem;
 }
@@ -242,7 +266,6 @@
 .journey-description {
   font-size: 1.9rem;
   line-height: 1.7;
-  padding-bottom: 1.9rem;
 }
 
 .journey-image {
@@ -257,36 +280,39 @@
 /***********************************/
 
 .section-contacts {
-  padding: 12.8rem 0;
+  padding: 12.8rem 4.8rem;
   background-color: #f6e6e6;
 }
 
 .sliders {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8rem;
 }
 
 .team {
-  padding: 4.8rem;
+  padding: 4.8rem 3.2rem;
   border-radius: 2rem;
   position: relative;
   background-color: #fff;
+  width: 128rem;
 }
 
 .team-name {
   font-size: 2.3rem;
+  line-height: 1.3;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 1.1px;
   padding-bottom: 3.2rem;
+  text-align: center;
 }
 
 .profile-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3.2rem;
+  gap: 2.4rem;
 }
 
 .profile-card {
@@ -323,18 +349,22 @@
 
 .profile-text-wrapper {
   padding: 8rem 0 4.8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .profile-name {
-  font-size: 2.3rem;
+  font-size: 1.9rem;
+  line-height: 1.3;
   font-weight: 600;
-  padding-bottom: 2rem;
+  padding-bottom: 1.2rem;
 }
 
 .profile-role {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  padding-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 
 .profile-contact:link,
@@ -344,7 +374,7 @@
   display: inline-block;
   text-decoration: none;
   padding: 1.2rem 2.4rem;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 500;
   border-radius: 0.8rem;
 }
@@ -356,31 +386,36 @@
 }
 
 .slider-btn {
-  font-size: 4.8rem;
-  color: #d03923;
+  font-size: 1.9rem;
+  padding: 1.2rem;
+  color: #fff;
+  background-color: #d03923;
+  border-radius: 50%;
   border: none;
   z-index: 1;
-  background-color: transparent;
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-btn:hover {
-  color: #af1c1c;
+  background-color: #af1c1c;
   cursor: pointer;
 }
 
 .left-btn {
   position: absolute;
-  left: 0;
-  transform: translateX(-50%);
-  top: 50%;
+  left: 30%;
+  top: 10%;
+  transform: translateY(-30%);
 }
 
 .right-btn {
   position: absolute;
-  right: 0;
-  transform: translateX(50%);
-  top: 50%;
+  right: 30%;
+  top: 10%;
+  transform: translateY(-30%);
 }
 
 /***********************************/

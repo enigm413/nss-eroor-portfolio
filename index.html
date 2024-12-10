@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="Stylesheets/general.css" />
     <link rel="stylesheet" href="Stylesheets/style.css" />
+    <link rel="stylesheet" href="Stylesheets/queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,24 +44,33 @@
               </li>
 
               <li>
-                <a href="#section-contact" class="nav-link">Contact Us</a>
+                <a href="#" class="nav-link">Contact Us</a>
               </li>
             </ul>
           </li>
 
           <li>
-            <a href="user-registration" class="nav-link">User Registration</a>
+            <a href="#" class="nav-link">User Registration</a>
           </li>
 
           <li>
-            <a href="Webpages/gallery.html" class="nav-link">Gallery</a>
+            <a href="#" class="nav-link">Gallery</a>
           </li>
 
           <li>
-            <a href="upcoming-event.html" class="nav-link">Upcoming Event</a>
+            <a href="#" class="nav-link">Upcoming Event</a>
           </li>
+
+          <li><button class="login-btn">Admin Login</button></li>
         </ul>
-        <button class="login-btn">Admin Login</button>
+
+        <button class="menu-btn">
+          <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="close-icon display--none"
+          ></ion-icon>
+        </button>
       </nav>
     </header>
 
@@ -85,17 +95,19 @@
 
       <div class="wrapper">
         <div class="vision-wrapper">
-          <div class="founder-quotes">
-            <div class="founder-image-wrapper">
-              <img
-                src="Images/founder.png"
-                alt="Mannath Padmanabhan"
-                class="founder-image"
-              />
-              <p class="founder-name">Mannath Padmanabhan</p>
-              <p class="founder-life">1878 - 1970</p>
-            </div>
+          <div class="founder-image-wrapper">
+            <img
+              src="Images/founder.webp"
+              alt="Mannath Padmanabhan"
+              class="founder-image"
+            />
+            <p class="founder-name">
+              <span>Mannath</span><span>Padmanabhan</span>
+            </p>
+            <p class="founder-life">1878 - 1970</p>
+          </div>
 
+          <div class="founder-quotes">
             <blockquote class="founder-quote">
               &quot;സ്വസമുദായ സ്നേഹമെന്നാൽ ഇതര സമുദായത്തോട് വൈരം എന്നർത്ഥമില്ല.
               അവനവൻ നന്നാകാനുള്ള ആഗ്രഹം കൊണ്ട് മറ്റുള്ളവരുടെ ഉയർച്ചയിൽ അസൂയ
@@ -113,18 +125,23 @@
               വേണ്ടിയുമായിരിക്കും എന്റെ പ്രവർത്തിപഥം &quot;
             </blockquote>
           </div>
-          <div class="nss-image-wrapper">
-            <img
-              src="Images/NSS-Gateway.png"
-              alt="Gateway of NSS Eroor"
-              class="nss-image"
-            />
 
-            <img
-              src="Images/Journey/journey-6.jpg"
-              alt="Building of NSS"
-              class="nss-image"
-            />
+          <div class="vision-images">
+            <div class="vision-image-wrapper">
+              <img
+                src="Images/nss-gateway.webp"
+                alt="Gateway of NSS Eroor"
+                class="vision-image"
+              />
+            </div>
+
+            <div class="vision-image-wrapper">
+              <img
+                src="Images/Journey/journey-6.webp"
+                alt="Building of NSS"
+                class="vision-image"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -150,11 +167,11 @@
             <p class="team-name">Executive Committee</p>
             <div class="profile-cards" id="executive-members"></div>
             <button class="slider-btn left-btn" id="executive-left-btn">
-              <ion-icon name="chevron-back-circle"></ion-icon>
+              <ion-icon name="play-back"></ion-icon>
             </button>
 
             <button class="slider-btn right-btn" id="executive-right-btn">
-              <ion-icon name="chevron-forward-circle"></ion-icon>
+              <ion-icon name="play-forward"></ion-icon>
             </button>
           </div>
 
@@ -162,11 +179,11 @@
             <p class="team-name">Vanitha Samajam Committee</p>
             <div class="profile-cards" id="vanitha-members"></div>
             <button class="slider-btn left-btn" id="vanitha-left-btn">
-              <ion-icon name="chevron-back-circle"></ion-icon>
+              <ion-icon name="play-back"></ion-icon>
             </button>
 
             <button class="slider-btn right-btn" id="vanitha-right-btn">
-              <ion-icon name="chevron-forward-circle"></ion-icon>
+              <ion-icon name="play-forward"></ion-icon>
             </button>
           </div>
 
@@ -174,11 +191,11 @@
             <p class="team-name">Regional Committee</p>
             <div class="profile-cards" id="regional-members"></div>
             <button class="slider-btn left-btn" id="regional-left-btn">
-              <ion-icon name="chevron-back-circle"></ion-icon>
+              <ion-icon name="play-back"></ion-icon>
             </button>
 
             <button class="slider-btn right-btn" id="regional-right-btn">
-              <ion-icon name="chevron-forward-circle"></ion-icon>
+              <ion-icon name="play-forward"></ion-icon>
             </button>
           </div>
 
@@ -186,11 +203,11 @@
             <p class="team-name">Bala Samajam Committee</p>
             <div class="profile-cards" id="bala-members"></div>
             <button class="slider-btn left-btn" id="bala-left-btn">
-              <ion-icon name="chevron-back-circle"></ion-icon>
+              <ion-icon name="play-back"></ion-icon>
             </button>
 
             <button class="slider-btn right-btn" id="bala-right-btn">
-              <ion-icon name="chevron-forward-circle"></ion-icon>
+              <ion-icon name="play-forward"></ion-icon>
             </button>
           </div>
         </div>
@@ -260,6 +277,6 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script type="module" src="index.js"></script>
+    <script type="module" src="Scripts/index.js"></script>
   </body>
 </html>
