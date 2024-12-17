@@ -1,7 +1,8 @@
-import { journeyData, teamMembersData } from "../data.js";
+// Importing necessary functions and value
+import { renderJourneyList } from "./journey.js";
+import { renderGaleryImageList } from "./gallery.js";
 
-// Define neccessary DOM element
-const journeyListEl = document.querySelector(".journey-list-wrapper");
+// Define neccessary DOM elements
 const executiveMembersEl = document.querySelector("#executive-members");
 const vanithaMembersEl = document.querySelector("#vanitha-members");
 const regionalMembersEl = document.querySelector("#regional-members");
@@ -14,58 +15,21 @@ const regionalLeftBtnEl = document.querySelector("#regional-left-btn");
 const regionalRightBtnEl = document.querySelector("#regional-right-btn");
 const balaLeftBtnEl = document.querySelector("#bala-left-btn");
 const balaRightBtnEl = document.querySelector("#bala-right-btn");
-const navLinksEL = document.querySelector(".nav-links");
-const menuBtnEL = document.querySelector(".menu-btn");
-const menuIconEL = document.querySelector(".menu-icon");
-const closeIconEL = document.querySelector(".close-icon");
+const menuBtnEl = document.querySelector(".menu-btn");
+const menuIconEl = document.querySelector(".menu-icon");
+const closeIconEl = document.querySelector(".close-icon");
+const navLinksEl = document.querySelector(".nav-links");
 
 const screenWidth = screen.width;
+let executiveStartPos = 0;
+let vanithaStartPos = 0;
+let regionalStartPos = 0;
+let balaStartPos = 0;
 
-const sliders = [
-  {
-    membersEl: executiveMembersEl,
-    leftBtnEl: executiveLeftBtnEl,
-    rightBtnEl: executiveRightBtnEl,
-    startPos: 0,
-    endPos: getEndPos(screenWidth),
-    sliderData: teamMembersData.filter((val) => {
-      return val.team === "Executive Committee";
-    }),
-  },
-
-  {
-    membersEl: vanithaMembersEl,
-    leftBtnEl: vanithaLeftBtnEl,
-    rightBtnEl: vanithaRightBtnEl,
-    startPos: 0,
-    endPos: getEndPos(screenWidth),
-    sliderData: teamMembersData.filter((val) => {
-      return val.team === "Vanitha Samajam Committee";
-    }),
-  },
-
-  {
-    membersEl: regionalMembersEl,
-    leftBtnEl: regionalLeftBtnEl,
-    rightBtnEl: regionalRightBtnEl,
-    startPos: 0,
-    endPos: getEndPos(screenWidth),
-    sliderData: teamMembersData.filter((val) => {
-      return val.team === "Regional Committee";
-    }),
-  },
-
-  {
-    membersEl: balaMembersEl,
-    leftBtnEl: balaLeftBtnEl,
-    rightBtnEl: balaRightBtnEl,
-    startPos: 0,
-    endPos: getEndPos(screenWidth),
-    sliderData: teamMembersData.filter((val) => {
-      return val.team === "Bala Samajam Committee";
-    }),
-  },
-];
+let executiveEndPos = getEndPos(screenWidth);
+let vanithaEndPos = getEndPos(screenWidth);
+let regionalEndPos = getEndPos(screenWidth);
+let balaEndPos = getEndPos(screenWidth);
 
 function getEndPos(val) {
   if (val > 1340) {
@@ -79,54 +43,21 @@ function getEndPos(val) {
   }
 }
 
-//Define Slider Left Button
-const slidersLeftBtns = sliders.map((val) => {
-  return val.leftBtnEl;
-});
-
-// Define Slider Right Button
-const slidersRightBtns = sliders.map((val) => {
-  return val.rightBtnEl;
-});
-
-////////////////////////////////////////////////
-/////////////// SECTION Journey ////////////////
-////////////////////////////////////////////////
-
-// Function To get the journey Item Template
-function getJourneyItemTemplate(journeyItem) {
-  const journeyItemTemplate = `
-  <li class="journey-item-wrapper">
-    <div class="journey-text-wrapper">
-      <p class="journey-year">${journeyItem.year}</p>
-      <p class="journey-title">${journeyItem.title}</p>
-      <p class="journey-description">${journeyItem.description}</p>
-    </div>
-
-    <div class="journey-image-wrapper">
-      <img
-        src="Images/Journey/${journeyItem.imageFileName}"
-        alt="${journeyItem.imageAlternateText}"
-        class="journey-image"
-        loading="lazy"
-      />
-    </div>
-  </li>`;
-  return journeyItemTemplate;
+//Function to get the team Members Data
+async function getTeamMembersData() {
+  const respone = await fetch("../Data/teamMembersData.json");
+  const data = await respone.json();
+  return data;
 }
 
-//Function To Render Journey List
-function renderJourneyList() {
-  let journeyList = "";
-  journeyData.forEach((val) => {
-    journeyList += getJourneyItemTemplate(val);
+//Function to get slider data
+async function getSliderData(team) {
+  const teamMembersData = await getTeamMembersData();
+  const sliderData = teamMembersData.filter((val) => {
+    return val.team === team;
   });
-  journeyListEl.innerHTML = journeyList;
+  return sliderData;
 }
-
-////////////////////////////////////////////////
-/////////////// SECTION CONTACT ////////////////
-////////////////////////////////////////////////
 
 //Function to get profile card template
 function getProfileCardTemplate(data) {
@@ -157,54 +88,188 @@ function getProfileCardTemplate(data) {
 }
 
 //Function to check Active Button
-function checkActiveBtn({ ...slider }) {
-  slider.leftBtnEl.classList.toggle("display--none", slider.startPos === 0);
-  slider.rightBtnEl.classList.toggle(
-    "display--none",
-    slider.endPos === slider.sliderData.length
-  );
+async function checkActiveBtn(
+  startPos,
+  endPos,
+  sliderData,
+  leftBtnEl,
+  rightBtnEl
+) {
+  leftBtnEl.classList.toggle("display--none", startPos === 0);
+  rightBtnEl.classList.toggle("display--none", endPos === sliderData.length);
 }
 
-//Function To Render Active Profile Cards
-function renderActiveProfileCards({ ...slider }) {
+async function renderSliders(
+  team,
+  startPos,
+  endPos,
+  membersEl,
+  leftBtnEl,
+  rightBtnEl
+) {
   let activeProfileData = "";
-  checkActiveBtn({ ...slider });
-  slider.sliderData.slice(slider.startPos, slider.endPos).map((val) => {
+  const sliderData = await getSliderData(team);
+  checkActiveBtn(startPos, endPos, sliderData, leftBtnEl, rightBtnEl);
+  sliderData.slice(startPos, endPos).forEach((val) => {
     activeProfileData += getProfileCardTemplate(val);
   });
-  slider.membersEl.innerHTML = activeProfileData;
+  membersEl.innerHTML = activeProfileData;
 }
 
-//Function To Render Slider
-function renderSliders() {
-  sliders.forEach((slider) => {
-    renderActiveProfileCards({ ...slider });
-  });
-}
-
-//Function To handle left button sliders
-slidersLeftBtns.forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    sliders[index].startPos--;
-    sliders[index].endPos--;
-    renderActiveProfileCards(sliders[index]);
-  });
-});
-
-//Function To handle right button sliders
-slidersRightBtns.forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    sliders[index].startPos++;
-    sliders[index].endPos++;
-    renderActiveProfileCards(sliders[index]);
-  });
-});
-
-menuBtnEL.addEventListener("click", () => {
-  navLinksEL.classList.toggle("display--flex");
-  menuIconEL.classList.toggle("display--none");
-  closeIconEL.classList.toggle("display--none");
-});
-
+// Executing All rendering Function
 renderJourneyList();
-renderSliders();
+renderGaleryImageList();
+renderSliders(
+  "Executive Committee",
+  executiveStartPos,
+  executiveEndPos,
+  executiveMembersEl,
+  executiveLeftBtnEl,
+  executiveRightBtnEl
+);
+
+renderSliders(
+  "Vanitha Samajam Committee",
+  vanithaStartPos,
+  vanithaEndPos,
+  vanithaMembersEl,
+  vanithaLeftBtnEl,
+  vanithaRightBtnEl
+);
+
+renderSliders(
+  "Regional Committee",
+  regionalStartPos,
+  regionalEndPos,
+  regionalMembersEl,
+  regionalLeftBtnEl,
+  regionalRightBtnEl
+);
+
+renderSliders(
+  "Bala Samajam Committee",
+  balaStartPos,
+  balaEndPos,
+  balaMembersEl,
+  balaLeftBtnEl,
+  balaRightBtnEl
+);
+
+// Handling Right Button On Executive Slider
+executiveRightBtnEl.addEventListener("click", () => {
+  executiveStartPos++;
+  executiveEndPos++;
+  renderSliders(
+    "Executive Committee",
+    executiveStartPos,
+    executiveEndPos,
+    executiveMembersEl,
+    executiveLeftBtnEl,
+    executiveRightBtnEl
+  );
+});
+
+// Handling Left Button On Executive Slider
+executiveLeftBtnEl.addEventListener("click", () => {
+  executiveStartPos--;
+  executiveEndPos--;
+  renderSliders(
+    "Executive Committee",
+    executiveStartPos,
+    executiveEndPos,
+    executiveMembersEl,
+    executiveLeftBtnEl,
+    executiveRightBtnEl
+  );
+});
+
+// Handling Right Button On Vanitha Slider
+vanithaRightBtnEl.addEventListener("click", () => {
+  vanithaStartPos++;
+  vanithaEndPos++;
+  renderSliders(
+    "Vanitha Samajam Committee",
+    vanithaStartPos,
+    vanithaEndPos,
+    vanithaMembersEl,
+    vanithaLeftBtnEl,
+    vanithaRightBtnEl
+  );
+});
+
+// Handling Left Button On Vanitha Slider
+vanithaLeftBtnEl.addEventListener("click", () => {
+  vanithaStartPos--;
+  vanithaEndPos--;
+  renderSliders(
+    "Vanitha Samajam Committee",
+    vanithaStartPos,
+    vanithaEndPos,
+    vanithaMembersEl,
+    vanithaLeftBtnEl,
+    vanithaRightBtnEl
+  );
+});
+
+// Handling Right Button On Regional Slider
+regionalRightBtnEl.addEventListener("click", () => {
+  regionalStartPos++;
+  regionalEndPos++;
+  renderSliders(
+    "Regional Committee",
+    regionalStartPos,
+    regionalEndPos,
+    regionalMembersEl,
+    regionalLeftBtnEl,
+    regionalRightBtnEl
+  );
+});
+
+// Handling Left Button On Regional Slider
+regionalLeftBtnEl.addEventListener("click", () => {
+  regionalStartPos--;
+  regionalEndPos--;
+  renderSliders(
+    "Regional Committee",
+    regionalStartPos,
+    regionalEndPos,
+    regionalMembersEl,
+    regionalLeftBtnEl,
+    regionalRightBtnEl
+  );
+});
+
+// Handling Right Button On Bala Slider
+balaRightBtnEl.addEventListener("click", () => {
+  balaStartPos++;
+  balaEndPos++;
+  renderSliders(
+    "Bala Samajam Committee",
+    balaStartPos,
+    balaEndPos,
+    balaMembersEl,
+    balaLeftBtnEl,
+    balaRightBtnEl
+  );
+});
+
+// Handling Left Button On Bala Slider
+balaLeftBtnEl.addEventListener("click", () => {
+  balaStartPos--;
+  balaEndPos--;
+  renderSliders(
+    "Bala Samajam Committee",
+    balaStartPos,
+    balaEndPos,
+    balaMembersEl,
+    balaLeftBtnEl,
+    balaRightBtnEl
+  );
+});
+
+// Handling Menu Button On Navigation Bar
+menuBtnEl.addEventListener("click", () => {
+  navLinksEl.classList.toggle("display--flex");
+  menuIconEl.classList.toggle("display--none");
+  closeIconEl.classList.toggle("display--none");
+});

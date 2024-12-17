@@ -418,6 +418,42 @@
   transform: translateY(-30%);
 }
 
+/**********************************/
+/**********SECTION-gallery**********/
+/**********************************/
+
+.section-gallery {
+  padding: 12.8rem 4.8rem;
+  background-color: #f6e6e6;
+}
+
+.section-gallery .wrapper {
+  padding-bottom: 0rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  list-style: none;
+}
+
+.gallery-image-wrapper {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.gallery-image-wrapper:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-image {
+  max-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
 /***********************************/
 /**********SECTION-FOOTER**********/
 /***********************************/

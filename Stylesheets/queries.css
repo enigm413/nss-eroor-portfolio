@@ -71,7 +71,8 @@
 
   .section-journey,
   .section-vision,
-  .section-contacts {
+  .section-contacts,
+  .section-gallery {
     padding: 12.8rem 4rem;
   }
 
@@ -98,6 +99,10 @@
 
   .profile-cards {
     gap: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .section-footer {
@@ -142,7 +147,8 @@
 
   .section-journey,
   .section-vision,
-  .section-contacts {
+  .section-contacts,
+  .section-gallery {
     padding: 12.8rem 4.8rem;
   }
 
@@ -237,7 +243,8 @@
 
   .section-journey,
   .section-vision,
-  .section-contacts {
+  .section-contacts,
+  .section-gallery {
     padding: 12.8rem 4rem;
   }
 
@@ -292,6 +299,10 @@
   .right-btn {
     right: 10%;
   }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /********************************************/
@@ -301,7 +312,8 @@
 @media (max-width: 530px) {
   .section-journey,
   .section-vision,
-  .section-contacts {
+  .section-contacts,
+  .section-gallery {
     padding: 12.8rem 0.8rem;
   }
 
@@ -326,6 +338,10 @@
     width: 40rem;
     align-self: center;
     padding: 4.8rem 3.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
   }
 
   .footer-contents {

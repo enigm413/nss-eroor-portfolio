@@ -1,0 +1,151 @@
+[
+  {
+    "id": "GAL-01",
+    "imageFileName": "gallery-01.webp",
+    "imageType": "Banner Image"
+  },
+
+  {
+    "id": "GAL-02",
+    "imageFileName": "gallery-02.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-03",
+    "imageFileName": "gallery-03.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-04",
+    "imageFileName": "gallery-04.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-05",
+    "imageFileName": "gallery-05.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-06",
+    "imageFileName": "gallery-06.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-07",
+    "imageFileName": "gallery-07.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-08",
+    "imageFileName": "gallery-08.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-09",
+    "imageFileName": "gallery-09.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-10",
+    "imageFileName": "gallery-10.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-11",
+    "imageFileName": "gallery-11.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-12",
+    "imageFileName": "gallery-12.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-13",
+    "imageFileName": "gallery-13.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-14",
+    "imageFileName": "gallery-14.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-15",
+    "imageFileName": "gallery-15.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-16",
+    "imageFileName": "gallery-16.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-17",
+    "imageFileName": "gallery-17.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-18",
+    "imageFileName": "gallery-18.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-19",
+    "imageFileName": "gallery-19.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-20",
+    "imageFileName": "gallery-20.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-21",
+    "imageFileName": "gallery-21.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-22",
+    "imageFileName": "gallery-22.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-23",
+    "imageFileName": "gallery-23.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-24",
+    "imageFileName": "gallery-24.webp",
+    "imageType": "Normal Image"
+  },
+
+  {
+    "id": "GAL-25",
+    "imageFileName": "gallery-25.webp",
+    "imageType": "Normal Image"
+  }
+]
