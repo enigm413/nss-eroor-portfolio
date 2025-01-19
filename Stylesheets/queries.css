@@ -72,7 +72,8 @@
   .section-journey,
   .section-vision,
   .section-contacts,
-  .section-gallery {
+  .section-gallery,
+  .section-user-registration {
     padding: 12.8rem 4rem;
   }
 
@@ -102,7 +103,7 @@
   }
 
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section-footer {
@@ -134,13 +135,6 @@
     display: none;
   }
 
-  .drop-down-links {
-    position: static;
-    transform: translateX(0);
-    gap: 3.2rem;
-    padding: 3.2rem 0 0 0;
-  }
-
   .section-hero {
     background-position: left;
   }
@@ -148,8 +142,9 @@
   .section-journey,
   .section-vision,
   .section-contacts,
-  .section-gallery {
-    padding: 12.8rem 4.8rem;
+  .section-gallery,
+  .section-user-registration {
+    padding: 12.8rem 3.6rem;
   }
 
   .vision-wrapper {
@@ -180,7 +175,7 @@
     grid-template-columns: 1fr;
     align-self: center;
     width: 75%;
-    padding: 3.2rem 4.8rem;
+    padding: 3.2rem 3.2rem;
   }
 
   .journey-image-wrapper {
@@ -244,8 +239,9 @@
   .section-journey,
   .section-vision,
   .section-contacts,
-  .section-gallery {
-    padding: 12.8rem 4rem;
+  .section-gallery,
+  .section-user-registration {
+    padding: 12.8rem 2.4rem;
   }
 
   .vision-intro-text {
@@ -301,7 +297,7 @@
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -313,7 +309,8 @@
   .section-journey,
   .section-vision,
   .section-contacts,
-  .section-gallery {
+  .section-gallery,
+  ..section-user-registration {
     padding: 12.8rem 0.8rem;
   }
 
@@ -338,10 +335,6 @@
     width: 40rem;
     align-self: center;
     padding: 4.8rem 3.2rem;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
   }
 
   .footer-contents {
