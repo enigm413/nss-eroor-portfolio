@@ -63,7 +63,8 @@ function getTargetEl(element, str) {
 
 //Function to get the team Members Data
 async function getTeamMembersData() {
-  const respone = await fetch("../Data/teamMembersData.json");
+  const respone = await fetch("../teamMembersData.json");
+
   const data = await respone.json();
   return data;
 }
