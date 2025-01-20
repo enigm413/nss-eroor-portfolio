@@ -87,7 +87,6 @@ function getProfileCardTemplate(data) {
         src="Images/Members/${data.imageFileName}"
         alt="${data.name}"
         class="profile-image"
-        loading="lazy"
       />
     </div>
 
