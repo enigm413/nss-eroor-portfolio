@@ -84,7 +84,7 @@ function getProfileCardTemplate(data) {
   <div class="profile-card">
     <div class="profile-image-wrapper">
       <img
-        src="../Images/Members/${data.imageFileName}"
+        src="Images/Members/${data.imageFileName}"
         alt="${data.name}"
         class="profile-image"
         loading="lazy"
