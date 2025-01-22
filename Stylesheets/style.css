@@ -427,7 +427,7 @@
       rgba(166, 3, 3, 0.4),
       rgba(255, 255, 255, 0.8)
     ),
-    url(../Images/form-image.jpg);
+    url(../Images/form-image.webp);
   background-size: cover;
   border-radius: 1.2rem;
 }

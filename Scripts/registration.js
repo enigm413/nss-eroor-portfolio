@@ -1,4 +1,6 @@
-const inputEls = document.querySelectorAll(".need-validation");
+// Define neccessary DOM elements
+const textInputEls = document.querySelectorAll(".text-validation");
+const fileInputEls = document.querySelectorAll(".file-validation");
 
 const errorMessageList = {
   name: getNameErrorMessage,
@@ -8,10 +10,12 @@ const errorMessageList = {
   address: getAddressErrorMessage,
   job: getJobErrorMessage,
   company: getCompanyErrorMessage,
+  photo: getPhotoErrorMessage,
+  letter: getLetterErrorMessage,
 };
 
-function getNameErrorMessage(val, inputEl) {
-  const nameVal = val.replace(/\s+/g, " ");
+//Function To Get Name Error Message
+function getNameErrorMessage(nameVal, inputEl) {
   const nameRegex = /[^a-z ]/gi;
   if (nameRegex.test(nameVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
@@ -22,37 +26,40 @@ function getNameErrorMessage(val, inputEl) {
   }
 }
 
-function getMailErrorMessage(val, inputEl) {
+//Function To Get Mail Error Message
+function getMailErrorMessage(mailVal, inputEl) {
   const mailRegex = /^[a-z0-9](\.?[a-z0-9]){5,29}@gmail\.com$/gi;
-  if (!mailRegex.test(val)) {
+  if (!mailRegex.test(mailVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
   } else {
     return "";
   }
 }
 
-function getAgeErrorMessage(val, inputEl) {
+//Function To Get Age Error Message
+function getAgeErrorMessage(ageVal, inputEl) {
   const ageRegex = /^\d{1,2}$/g;
   if (!ageRegex.test(val)) {
     return `Please Enter valid ${inputEl.id}!!!`;
-  } else if (Number(val) < 18) {
+  } else if (Number(ageVal) < 18) {
     return "Minimum Age Requirement To Register is 18";
   } else {
     return "";
   }
 }
 
-function getContactErrorMessage(val, inputEl) {
-  const ageRegex = /^\d{10}$/g;
-  if (!ageRegex.test(val)) {
+//Function To Get Contact Error Message
+function getContactErrorMessage(contactVal, inputEl) {
+  const contactRegex = /^\d{10}$/g;
+  if (!ageRegex.test(contactVal)) {
     return `Please Enter valid ${inputEl.id} number!!!`;
   } else {
     return "";
   }
 }
 
-function getJobErrorMessage(val, inputEl) {
-  const jobVal = val.replace(/\s+/g, " ");
+//Function To Get Job Error Message
+function getJobErrorMessage(jobVal, inputEl) {
   const jobRegex = /[^a-z ]/gi;
   if (jobRegex.test(jobVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
@@ -61,8 +68,8 @@ function getJobErrorMessage(val, inputEl) {
   }
 }
 
-function getCompanyErrorMessage(val, inputEl) {
-  const companyVal = val.replace(/\s+/g, " ");
+//Function To Get Name Error Message
+function getCompanyErrorMessage(companyVal, inputEl) {
   const companyRegex = /^[a-z0-9\s]+$/gi;
   if (companyRegex.test(companyVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
@@ -71,13 +78,37 @@ function getCompanyErrorMessage(val, inputEl) {
   }
 }
 
-function getAddressErrorMessage(val, inputEl) {
-  const addressVal = val.replace(/\s+/g, " ");
+function getAddressErrorMessage(addressVal, inputEl) {
   const addressRegex = /([a-z0-9]+,? ?\/?)+/gi;
   if (!addressRegex.test(addressVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
   } else if (!/[\d{6}]/g.test(addressVal)) {
     return "Please Add Pincode along with address";
+  } else {
+    return "";
+  }
+}
+
+function getLetterErrorMessage(val, inputEl) {
+  const fileType = val.type;
+  const fileSize = val.size;
+  if (fileType !== "application/msword" && fileType !== "application/pdf") {
+    return "The acknowledgement letter should be in PDF or DOC format";
+  } else if (fileSize > 1024 * 1024 * 2) {
+    return "File is too large (Max Size : 2Mb)";
+  } else {
+    return "";
+  }
+}
+
+function getPhotoErrorMessage(val, inputEl) {
+  const fileType = val.type;
+  const fileSize = val.size;
+
+  if (fileType !== "image/jpeg" && fileType !== "image/png") {
+    return "The acknowledgement letter should be in PDF or DOC format";
+  } else if (fileSize > 1024 * 100) {
+    return "File is too large (Max Size : 2Mb)";
   } else {
     return "";
   }
@@ -89,29 +120,37 @@ function displayError(messageEl, message, chckError) {
 }
 
 function validateInput(val, inputEl, str) {
-  //Remove All Unwanted Space
-  const inputVal = val.trim();
+  const inputVal =
+    typeof val === "string" ? val.trim().replace(/\s+/g, " ") : val;
   const errorMessageEl = inputEl.nextElementSibling;
   const errorMessage = errorMessageList[str](inputVal, inputEl);
   const isError = errorMessage !== "" ? true : false;
   displayError(errorMessageEl, errorMessage, isError);
 }
 
-// Handling Change Event Related To Names
-inputEls.forEach((inputEl) => {
+// Handling Change Event Related To All Text Input Elements
+textInputEls.forEach((inputEl) => {
   inputEl.addEventListener("change", (event) => {
     const str = inputEl.id.split("-").slice(-1)[0];
     validateInput(event.target.value, inputEl, str);
   });
 });
 
-// Handling Change Event Related To Names
-inputEls.forEach((inputEl) => {
+// Handling Change Event Related To ALl Text Input Elements
+textInputEls.forEach((inputEl) => {
   inputEl.addEventListener("input", (event) => {
     const inputVal = event.target.value;
     const errorMessageEl = inputEl.nextElementSibling;
     if (inputVal === "") {
       errorMessageEl.classList.remove("visibility--visible");
     }
+  });
+});
+
+// Handling Change Event Related To All File Input Elements
+fileInputEls.forEach((inputEl) => {
+  inputEl.addEventListener("change", (event) => {
+    const str = inputEl.id.split("-").slice(-1)[0];
+    validateInput(event.target.files[0], inputEl, str);
   });
 });
