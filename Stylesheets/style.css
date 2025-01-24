@@ -540,7 +540,7 @@ input[type="file"]::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-.form-submit-btn {
+.submit-btn {
   background-color: #d03923;
   border: none;
   color: #fff;
@@ -555,7 +555,7 @@ input[type="file"]::-webkit-file-upload-button {
   justify-self: end;
 }
 
-.form-submit-btn:hover {
+.submit-btn:hover {
   background-color: #af1c1c;
 }
 

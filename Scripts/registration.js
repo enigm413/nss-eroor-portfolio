@@ -1,7 +1,9 @@
 // Define neccessary DOM elements
 const textInputEls = document.querySelectorAll(".text-validation");
 const fileInputEls = document.querySelectorAll(".file-validation");
-
+const requiredInputEls = document.querySelectorAll("[required]");
+const userRegFormEl = document.querySelector(".user-reg-form");
+const submitBtnEl = document.querySelector(".submit-btn");
 const errorMessageList = {
   name: getNameErrorMessage,
   mail: getMailErrorMessage,
@@ -39,7 +41,7 @@ function getMailErrorMessage(mailVal, inputEl) {
 //Function To Get Age Error Message
 function getAgeErrorMessage(ageVal, inputEl) {
   const ageRegex = /^\d{1,2}$/g;
-  if (!ageRegex.test(val)) {
+  if (!ageRegex.test(ageVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
   } else if (Number(ageVal) < 18) {
     return "Minimum Age Requirement To Register is 18";
@@ -51,7 +53,7 @@ function getAgeErrorMessage(ageVal, inputEl) {
 //Function To Get Contact Error Message
 function getContactErrorMessage(contactVal, inputEl) {
   const contactRegex = /^\d{10}$/g;
-  if (!ageRegex.test(contactVal)) {
+  if (!contactRegex.test(contactVal)) {
     return `Please Enter valid ${inputEl.id} number!!!`;
   } else {
     return "";
@@ -70,7 +72,7 @@ function getJobErrorMessage(jobVal, inputEl) {
 
 //Function To Get Name Error Message
 function getCompanyErrorMessage(companyVal, inputEl) {
-  const companyRegex = /^[a-z0-9\s]+$/gi;
+  const companyRegex = /[^a-z0-9\s]+$/gi;
   if (companyRegex.test(companyVal)) {
     return `Please Enter valid ${inputEl.id}!!!`;
   } else {
@@ -78,6 +80,7 @@ function getCompanyErrorMessage(companyVal, inputEl) {
   }
 }
 
+//Function To Get Address Error Message
 function getAddressErrorMessage(addressVal, inputEl) {
   const addressRegex = /([a-z0-9]+,? ?\/?)+/gi;
   if (!addressRegex.test(addressVal)) {
@@ -89,6 +92,7 @@ function getAddressErrorMessage(addressVal, inputEl) {
   }
 }
 
+//Function To Get Letter Error Message
 function getLetterErrorMessage(val, inputEl) {
   const fileType = val.type;
   const fileSize = val.size;
@@ -101,10 +105,10 @@ function getLetterErrorMessage(val, inputEl) {
   }
 }
 
+//Function To Get Photo Error Message
 function getPhotoErrorMessage(val, inputEl) {
   const fileType = val.type;
   const fileSize = val.size;
-
   if (fileType !== "image/jpeg" && fileType !== "image/png") {
     return "The acknowledgement letter should be in PDF or DOC format";
   } else if (fileSize > 1024 * 100) {
@@ -114,11 +118,18 @@ function getPhotoErrorMessage(val, inputEl) {
   }
 }
 
+//Function To Display Error Message
 function displayError(messageEl, message, chckError) {
   messageEl.textContent = message;
   messageEl.classList.toggle("visibility--visible", chckError);
 }
 
+function disableSubmitBtn(chckError) {
+  submitBtnEl.disabled = chckError ? true : false;
+  submitBtnEl.classList.toggle("disabled-btn", chckError);
+}
+
+//Function To Validate Inputs
 function validateInput(val, inputEl, str) {
   const inputVal =
     typeof val === "string" ? val.trim().replace(/\s+/g, " ") : val;
@@ -126,6 +137,17 @@ function validateInput(val, inputEl, str) {
   const errorMessage = errorMessageList[str](inputVal, inputEl);
   const isError = errorMessage !== "" ? true : false;
   displayError(errorMessageEl, errorMessage, isError);
+  disableSubmitBtn(isError);
+}
+
+//Function To Validate Empty Inputs
+function validateEmptyInput(inputEl) {
+  const errorMessageEl = inputEl.nextElementSibling;
+  const errorMessage = "This field should not be empty";
+  const isError = errorMessage !== "" ? true : false;
+  inputEl.previousElementSibling.scrollIntoView({ block: "center" });
+  displayError(errorMessageEl, errorMessage, isError);
+  disableSubmitBtn(isError);
 }
 
 // Handling Change Event Related To All Text Input Elements
@@ -141,9 +163,8 @@ textInputEls.forEach((inputEl) => {
   inputEl.addEventListener("input", (event) => {
     const inputVal = event.target.value;
     const errorMessageEl = inputEl.nextElementSibling;
-    if (inputVal === "") {
-      errorMessageEl.classList.remove("visibility--visible");
-    }
+    errorMessageEl.classList.remove("visibility--visible");
+    disableSubmitBtn(false);
   });
 });
 
@@ -153,4 +174,14 @@ fileInputEls.forEach((inputEl) => {
     const str = inputEl.id.split("-").slice(-1)[0];
     validateInput(event.target.files[0], inputEl, str);
   });
+});
+
+userRegFormEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const emptyInpultEls = [...requiredInputEls].filter((inputEl) => {
+    return inputEl.value === "";
+  });
+
+  validateEmptyInput(emptyInpultEls[0]);
 });

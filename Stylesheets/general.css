@@ -123,6 +123,11 @@ body {
   visibility: visible !important;
 }
 
+.disabled-btn {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
 .grid-col--span {
   grid-column: span 2;
 }
