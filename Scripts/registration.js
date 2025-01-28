@@ -4,6 +4,8 @@ const fileInputEls = document.querySelectorAll(".file-validation");
 const requiredInputEls = document.querySelectorAll("[required]");
 const userRegFormEl = document.querySelector(".user-reg-form");
 const submitBtnEl = document.querySelector(".submit-btn");
+
+let isError = false;
 const errorMessageList = {
   name: getNameErrorMessage,
   mail: getMailErrorMessage,
@@ -118,12 +120,20 @@ function getPhotoErrorMessage(val, inputEl) {
   }
 }
 
+//Function To Handle Error
+function handleError(errorMessageEl, errorMessage) {
+  isError = errorMessage !== "" ? true : false;
+  displayError(errorMessageEl, errorMessage, isError);
+  disableSubmitBtn(isError);
+}
+
 //Function To Display Error Message
 function displayError(messageEl, message, chckError) {
   messageEl.textContent = message;
   messageEl.classList.toggle("visibility--visible", chckError);
 }
 
+//Function To Disable Submit Button
 function disableSubmitBtn(chckError) {
   submitBtnEl.disabled = chckError ? true : false;
   submitBtnEl.classList.toggle("disabled-btn", chckError);
@@ -131,23 +141,14 @@ function disableSubmitBtn(chckError) {
 
 //Function To Validate Inputs
 function validateInput(val, inputEl, str) {
+  const emptyInputMessage = "This field should not be empty";
+  const errorMessageEl = inputEl.nextElementSibling;
   const inputVal =
     typeof val === "string" ? val.trim().replace(/\s+/g, " ") : val;
-  const errorMessageEl = inputEl.nextElementSibling;
-  const errorMessage = errorMessageList[str](inputVal, inputEl);
-  const isError = errorMessage !== "" ? true : false;
-  displayError(errorMessageEl, errorMessage, isError);
-  disableSubmitBtn(isError);
-}
+  const errorMessage =
+    str === "" ? emptyInputMessage : errorMessageList[str](inputVal, inputEl);
 
-//Function To Validate Empty Inputs
-function validateEmptyInput(inputEl) {
-  const errorMessageEl = inputEl.nextElementSibling;
-  const errorMessage = "This field should not be empty";
-  const isError = errorMessage !== "" ? true : false;
-  inputEl.previousElementSibling.scrollIntoView({ block: "center" });
-  displayError(errorMessageEl, errorMessage, isError);
-  disableSubmitBtn(isError);
+  handleError(errorMessageEl, errorMessage);
 }
 
 // Handling Change Event Related To All Text Input Elements
@@ -176,12 +177,19 @@ fileInputEls.forEach((inputEl) => {
   });
 });
 
-userRegFormEl.addEventListener("submit", (event) => {
+// Handling Form Submission Event
+userRegFormEl.addEventListener("submit", async (event) => {
+  // Prevent Default behaviour of form submission
   event.preventDefault();
 
   const emptyInpultEls = [...requiredInputEls].filter((inputEl) => {
     return inputEl.value === "";
   });
 
-  validateEmptyInput(emptyInpultEls[0]);
+  if (emptyInpultEls.length > 0) {
+    validateInput(emptyInpultEls[0].value, emptyInpultEls[0], "");
+    emptyInpultEls[0].previousElementSibling.scrollIntoView({
+      block: "center",
+    });
+  }
 });

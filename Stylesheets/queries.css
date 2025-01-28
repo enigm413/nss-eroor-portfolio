@@ -77,6 +77,10 @@
     padding: 12.8rem 4rem;
   }
 
+  .section-user-registration {
+    padding: 9.6rem 4rem;
+  }
+
   .vision-wrapper {
     gap: 3.2rem;
   }
@@ -109,6 +113,10 @@
   .section-footer {
     padding: 9.6rem 0 3.2rem 0;
   }
+
+  .user-reg-form {
+    padding: 6.4rem 4.8rem;
+  }
 }
 
 /********************************************/
@@ -133,6 +141,7 @@
     width: 100vw;
     padding: 4.8rem 0;
     display: none;
+    z-index: 1;
   }
 
   .section-hero {
@@ -144,6 +153,10 @@
   .section-contacts,
   .section-gallery {
     padding: 12.8rem 3.6rem;
+  }
+
+  .section-user-registration {
+    padding: 9.6rem 3.6rem;
   }
 
   .vision-wrapper {
@@ -203,6 +216,24 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .user-reg-form {
+    padding: 6.4rem 3.6rem;
+  }
+
+  .form-content-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .submit-btn {
+    grid-row: 17/18;
+    width: 30%;
+    padding: 1.2rem 3.6rem;
+  }
+
+  .grid-col--span {
+    grid-column: span 1;
+  }
+
   .section-footer .wrapper {
     max-width: 80rem;
   }
@@ -240,6 +271,10 @@
   .section-contacts,
   .section-gallery {
     padding: 12.8rem 2.4rem;
+  }
+
+  .section-user-registration {
+    padding: 9.6rem 2.4rem;
   }
 
   .vision-intro-text {
@@ -297,6 +332,10 @@
   .gallery {
     grid-template-columns: 1fr;
   }
+
+  .user-reg-form {
+    padding: 6.4rem 2.4rem;
+  }
 }
 
 /********************************************/
@@ -312,7 +351,7 @@
   }
 
   .section-user-registration {
-    padding: 1.2rem 0.8rem;
+    padding: 9.6rem 0.8rem;
   }
 
   .wrapper {
@@ -336,6 +375,10 @@
     width: 40rem;
     align-self: center;
     padding: 4.8rem 3.2rem;
+  }
+
+  .user-reg-form {
+    padding: 6.4rem 0.8rem;
   }
 
   .footer-contents {
