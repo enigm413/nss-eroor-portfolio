@@ -120,6 +120,13 @@ function getPhotoErrorMessage(val, inputEl) {
   }
 }
 
+//Function To Get Empty Required Elements
+function getRequiredEmptyInputEls() {
+  return [...requiredInputEls].filter((inputEl) => {
+    return inputEl.value === "";
+  });
+}
+
 //Function To Handle Error
 function handleError(errorMessageEl, errorMessage) {
   isError = errorMessage !== "" ? true : false;
@@ -149,6 +156,16 @@ function validateInput(val, inputEl, str) {
     str === "" ? emptyInputMessage : errorMessageList[str](inputVal, inputEl);
 
   handleError(errorMessageEl, errorMessage);
+}
+
+// Function To Validate Empty Inputs
+function validateRequiredInput(inputEls) {
+  if (inputEls.length > 0) {
+    validateInput(inputEls[0].value, inputEls[0], "");
+    inputEls[0].previousElementSibling.scrollIntoView({
+      block: "center",
+    });
+  }
 }
 
 // Handling Change Event Related To All Text Input Elements
@@ -182,14 +199,21 @@ userRegFormEl.addEventListener("submit", async (event) => {
   // Prevent Default behaviour of form submission
   event.preventDefault();
 
-  const emptyInpultEls = [...requiredInputEls].filter((inputEl) => {
-    return inputEl.value === "";
-  });
+  const spreadsheetUrl =
+    "https://script.google.com/macros/s/AKfycbyABRvBKr_x59oUynxUDqZ2dCjmlf93X4zMEWwcQNGzmtEVcN3aXY9goq0nOidbyz77/exec";
 
-  if (emptyInpultEls.length > 0) {
-    validateInput(emptyInpultEls[0].value, emptyInpultEls[0], "");
-    emptyInpultEls[0].previousElementSibling.scrollIntoView({
-      block: "center",
+  //Validating Required Empty Onput Elements
+  const requiredEmptyInputEls = getRequiredEmptyInputEls();
+  validateRequiredInput(requiredEmptyInputEls);
+
+  if (!isError) {
+    const formdata = new FormData(userRegFormEl);
+    const newUserData = Object.fromEntries(formdata);
+    const respone = await fetch(spreadsheetUrl, {
+      method: "POST",
+      body: JSON.stringify(newUserData),
     });
+
+    console.log(respone);
   }
 });
