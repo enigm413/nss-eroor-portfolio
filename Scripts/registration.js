@@ -151,6 +151,27 @@ function validateInput(val, inputEl, str) {
   handleError(errorMessageEl, errorMessage);
 }
 
+//Function Ti Handle Data Submission
+async function handleDataSubmission(data) {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Something went wrong. HTTP Status : ${response.status} Please try again later. If this issue persists, please contact the website owner`
+      );
+    } else {
+      const data = await response.json();
+      console.log(data);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 // Handling Change Event Related To All Text Input Elements
 textInputEls.forEach((inputEl) => {
   inputEl.addEventListener("change", (event) => {
@@ -191,5 +212,11 @@ userRegFormEl.addEventListener("submit", async (event) => {
     emptyInpultEls[0].previousElementSibling.scrollIntoView({
       block: "center",
     });
+  }
+
+  if (!isError) {
+    const formdata = new FormData(userRegFormEl);
+    const newUserData = Object.fromEntries(formdata);
+    handleDataSubmission(newUserData);
   }
 });
