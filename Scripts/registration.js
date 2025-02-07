@@ -72,7 +72,7 @@ function getJobErrorMessage(jobVal, inputEl) {
   }
 }
 
-//Function To Get Name Error Message
+//Function To Get Company Name Error Message
 function getCompanyErrorMessage(companyVal, inputEl) {
   const companyRegex = /[^a-z0-9\s]+$/gi;
   if (companyRegex.test(companyVal)) {
@@ -112,7 +112,7 @@ function getPhotoErrorMessage(val, inputEl) {
   const fileType = val.type;
   const fileSize = val.size;
   if (fileType !== "image/jpeg" && fileType !== "image/png") {
-    return "The acknowledgement letter should be in PDF or DOC format";
+    return "The acknowledgement letter should be in JPG or PNG format";
   } else if (fileSize > 1024 * 100) {
     return "File is too large (Max Size : 2Mb)";
   } else {
@@ -153,23 +153,18 @@ function validateInput(val, inputEl, str) {
 
 //Function Ti Handle Data Submission
 async function handleDataSubmission(data) {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbwsxKu_PcKUX-se5A-7OL9RwgUAJmg-Qzg2LcVIxrkRpfRYfT6tdezElRsfP2WsvxT0/exec",
+    {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error(
-        `Something went wrong. HTTP Status : ${response.status} Please try again later. If this issue persists, please contact the website owner`
-      );
-    } else {
-      const data = await response.json();
-      console.log(data);
     }
-  } catch (error) {
-    console.log(error);
-  }
+  );
+
+  console.log(response);
 }
 
 // Handling Change Event Related To All Text Input Elements
@@ -180,7 +175,7 @@ textInputEls.forEach((inputEl) => {
   });
 });
 
-// Handling Change Event Related To ALl Text Input Elements
+// Handling Input Event Related To ALl Text Input Elements
 textInputEls.forEach((inputEl) => {
   inputEl.addEventListener("input", (event) => {
     const inputVal = event.target.value;
