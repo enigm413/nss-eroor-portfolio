@@ -125,13 +125,16 @@ function validateInput(val, inputEl, str) {
 //Function To Handle Data Submission
 async function handleDataSubmission(data) {
   try {
-    const response = await fetch("", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ values: [[...data]] }),
-    });
+    const response = await fetch(
+      "https://api.apico.dev/v1/Gov1mb/130-p84nbnMlwQ9-uklZhojiFRKq22hCJ8mWoZXpRZVo/values/User_Data:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS&includeValuesInResponse=true",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ values: [[...data]] }),
+      }
+    );
 
     if (response.ok) {
       alert(
