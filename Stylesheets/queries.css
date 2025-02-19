@@ -1,0 +1,388 @@
+/********************************************/
+/***********MEDIUM-LAPTOP-DESIGN*************/
+/********************************************/
+@media (max-width: 1340px) {
+  .team {
+    width: 96rem;
+  }
+
+  .profile-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .left-btn {
+    left: 20%;
+  }
+
+  .right-btn {
+    right: 20%;
+  }
+}
+
+/********************************************/
+/***********SMALL-LAPTOP-DESIGN**************/
+/********************************************/
+
+@media (max-width: 1270px) {
+  html {
+    font-size: 56.3%;
+  }
+
+  .wrapper {
+    padding-bottom: 3.2rem;
+  }
+
+  .heading--primary {
+    font-size: 4rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .vision-wrapper {
+    gap: 4rem;
+  }
+
+  .founder-quote {
+    padding: 2rem;
+  }
+
+  .journey-item-wrapper {
+    gap: 3.2rem;
+    padding: 2.4rem;
+  }
+
+  .journey-year {
+    font-size: 4rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .journey-title {
+    font-size: 2.3rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
+/********************************************/
+/************LANDSCAPE-TABLET-DESIGN*********/
+/********************************************/
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-journey,
+  .section-vision,
+  .section-contacts,
+  .section-gallery {
+    padding: 12.8rem 4rem;
+  }
+
+  .section-user-registration {
+    padding: 9.6rem 4rem;
+  }
+
+  .vision-wrapper {
+    gap: 3.2rem;
+  }
+
+  .founder-quotes {
+    gap: 2rem;
+  }
+
+  .journey-item-wrapper {
+    gap: 2rem;
+    padding: 1.6rem;
+  }
+
+  .journey-year {
+    font-size: 3.3rem;
+  }
+
+  .sliders {
+    gap: 6.4rem;
+  }
+
+  .profile-cards {
+    gap: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-footer {
+    padding: 9.6rem 0 3.2rem 0;
+  }
+
+  .user-reg-form {
+    padding: 6.4rem 4.8rem;
+  }
+}
+
+/********************************************/
+/*************PORTRAIT-TABLET-DESIGN*********/
+/********************************************/
+
+@media (max-width: 960px) {
+  .nav-bar {
+    position: relative;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    right: 0px;
+    top: 70%;
+    width: 100vw;
+    padding: 4.8rem 0;
+    display: none;
+    z-index: 1;
+  }
+
+  .section-hero {
+    background-position: left;
+  }
+
+  .section-journey,
+  .section-vision,
+  .section-contacts,
+  .section-gallery {
+    padding: 12.8rem 3.6rem;
+  }
+
+  .section-user-registration {
+    padding: 9.6rem 3.6rem;
+  }
+
+  .vision-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-image-wrapper {
+    max-width: 35rem;
+    width: 100%;
+    justify-self: center;
+    padding: 2rem;
+  }
+
+  .founder-name {
+    padding: 1.2rem;
+  }
+
+  .vision-images {
+    grid-column: span 1;
+    gap: 0.8rem;
+  }
+
+  .journey-list-wrapper {
+    gap: 5.6rem;
+  }
+
+  .journey-item-wrapper {
+    grid-template-columns: 1fr;
+    align-self: center;
+    width: 75%;
+    padding: 3.2rem 3.2rem;
+  }
+
+  .journey-image-wrapper {
+    max-width: 55rem;
+    width: 100%;
+  }
+
+  .journey-image- {
+    aspect-ratio: 9/16;
+  }
+
+  .sliders {
+    align-items: center;
+  }
+
+  .team {
+    width: 80rem;
+    padding: 4.8rem 6.4rem;
+  }
+
+  .team-name {
+    padding-bottom: 4.8rem;
+  }
+
+  .profile-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .user-reg-form {
+    padding: 6.4rem 3.6rem;
+  }
+
+  .form-content-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .submit-btn {
+    grid-row: 17/18;
+    width: 30%;
+    padding: 1.2rem 3.6rem;
+  }
+
+  .grid-col--span {
+    grid-column: span 1;
+  }
+
+  .section-footer .wrapper {
+    max-width: 80rem;
+  }
+
+  .footer-contents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-image-wrapper,
+  .copy-wrapper {
+    grid-column: span 2;
+  }
+}
+
+/********************************************/
+/***************SMALL-TABLET-DESIGN**********/
+/********************************************/
+
+@media (max-width: 730px) {
+  .section-hero {
+    background-position: right;
+  }
+
+  .hero-wrapper {
+    padding: 2.4rem;
+  }
+
+  .heading--primary {
+    font-size: 3.3rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .section-journey,
+  .section-vision,
+  .section-contacts,
+  .section-gallery {
+    padding: 12.8rem 2.4rem;
+  }
+
+  .section-user-registration {
+    padding: 9.6rem 2.4rem;
+  }
+
+  .vision-intro-text {
+    font-size: 1.9rem;
+  }
+
+  .vision-images {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    width: 100%;
+  }
+
+  .vision-image {
+    max-width: 60rem;
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+
+  .journey-list-wrapper {
+    gap: 4.9rem;
+  }
+
+  .journey-item-wrapper {
+    width: 100%;
+  }
+
+  .team {
+    width: 48rem;
+    padding: 4.8rem 8rem;
+  }
+
+  .team-name {
+    font-size: 1.9rem;
+    padding: 0 4rem 2rem 4rem;
+    letter-spacing: 1px;
+  }
+
+  .profile-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .slider-btn {
+    font-size: 1.9rem;
+    padding: 0.4rem;
+  }
+
+  .left-btn {
+    left: 10%;
+  }
+
+  .right-btn {
+    right: 10%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .user-reg-form {
+    padding: 6.4rem 2.4rem;
+  }
+}
+
+/********************************************/
+/******************MOBILE-DESIGN*************/
+/********************************************/
+
+@media (max-width: 530px) {
+  .section-journey,
+  .section-vision,
+  .section-contacts,
+  .section-gallery {
+    padding: 12.8rem 0.8rem;
+  }
+
+  .section-user-registration {
+    padding: 9.6rem 0.8rem;
+  }
+
+  .wrapper {
+    padding-bottom: 2rem;
+  }
+
+  .vision-images {
+    gap: 2rem;
+    aspect-ratio: auto;
+  }
+
+  .journey-item-wrapper {
+    padding: 2rem 0.8rem;
+  }
+
+  .journey-title {
+    font: size 1.9rem;
+  }
+
+  .team {
+    width: 40rem;
+    align-self: center;
+    padding: 4.8rem 3.2rem;
+  }
+
+  .user-reg-form {
+    padding: 6.4rem 0.8rem;
+  }
+
+  .footer-contents {
+    grid-template-columns: 0.7fr 1fr;
+    column-gap: 0rem;
+  }
+}

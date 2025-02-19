@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nair Service Society Eroor : User Registration</title>
+
+    <link rel="stylesheet" href="../Stylesheets/general.css" />
+    <link rel="stylesheet" href="../Stylesheets/style.css" />
+    <link rel="stylesheet" href="../Stylesheets/queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="nav-bar">
+      <img src="../Images/logo.png" alt="NSS Logo" class="logo-image" />
+      <nav class="nav-link-wrapper">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="../index.html#section-vision" class="nav-link"
+              >Our Vision</a
+            >
+          </li>
+          <li>
+            <a href="../index.html#section-journey" class="nav-link">
+              Our Journey
+            </a>
+          </li>
+          <li>
+            <a href="../index.html#section-contacts" class="nav-link"
+              >Contact Us</a
+            >
+          </li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li>
+            <a href="#" class="nav-link"> User Registration </a>
+          </li>
+        </ul>
+
+        <button class="menu-btn">
+          <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="close-icon display--none"
+          ></ion-icon>
+        </button>
+      </nav>
+    </header>
+
+    <section class="section-user-registration">
+      <div class="wrapper">
+        <form class="user-reg-form" novalidate>
+          <div class="form-title-wrapper">
+            <h1 class="user-reg-title">User Registration Form</h1>
+          </div>
+
+          <div class="form-content-wrapper">
+            <div class="input-wrapper">
+              <label for="user-name" class="input-label">Full Name</label>
+              <input
+                type="text"
+                id="user-name"
+                class="text-validation"
+                name="username"
+                placeholder="Raghav Menon"
+                autocomplete="off"
+                required
+              />
+
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="mail" class="input-label">Mail Address</label>
+              <input
+                type="text"
+                id="mail"
+                name="mail"
+                class="text-validation"
+                placeholder="raghav123@gmail.com"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="username" class="input-label">Age</label>
+              <input
+                type="text"
+                id="age"
+                class="text-validation"
+                name="age"
+                placeholder="23"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <p class="input-label">Gender</p>
+
+              <div class="radio-input-list">
+                <div class="radio-input-item">
+                  <input
+                    type="radio"
+                    id="gender"
+                    name="gender"
+                    value="male"
+                    class="radio-input"
+                    checked
+                  />
+                  <label for="gender" class="radio-input-label">Male</label>
+                </div>
+
+                <div class="radio-input-item">
+                  <input
+                    type="radio"
+                    id="gender"
+                    name="gender"
+                    class="radio-input"
+                  />
+                  <label for="gender" class="radio-input-label">Female</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="contact" class="input-label"> Contact number </label>
+              <input
+                type="tel"
+                id="contact"
+                name="contact"
+                class="text-validation"
+                placeholder="9646461274"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper grid-col--span">
+              <label for="current-address" class="input-label">
+                current address including pincode:
+              </label>
+              <input
+                type="text"
+                id="current-address"
+                class="text-validation"
+                name="current-address"
+                placeholder="Behind Lulu Mall, Nethaji Nagar, Edappally, 682024"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="job" class="input-label">Job Title</label>
+              <input
+                type="text"
+                id="job"
+                class="text-validation"
+                name="job-title"
+                placeholder="Full Stack Web Developer"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="company" class="input-label">Company Name</label>
+              <input
+                type="text"
+                id="company"
+                class="text-validation"
+                name="company"
+                placeholder="TATA Consulatncy Service"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="blood-groups" class="input-label">Blood group</label>
+              <select name="blood-groups" id="blood-groups">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+              <option value=""></option>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="father-name" class="input-label">father's name</label>
+              <input
+                type="text"
+                id="father-name"
+                class="text-validation"
+                name="father-name"
+                placeholder="Rajeev S Menon"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="mother-name" class="input-label">mother's name</label>
+              <input
+                type="text"
+                id="mother-name"
+                class="text-validation"
+                name="mother-name"
+                placeholder="Saritha S Menon"
+                autocomplete="off"
+                required
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="spouse-name" class="input-label">spouse name :</label>
+              <input
+                type="text"
+                id="spouse-name"
+                class="text-validation"
+                name="spouse-name"
+                placeholder="Viswanath"
+                autocomplete="off"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="input-wrapper grid-col--span">
+              <label for="company" class="input-label">
+                Previous Address, If transfered
+              </label>
+              <input
+                type="text"
+                id="prev-address"
+                name="prev-address"
+                class="text-validation"
+                placeholder="Jawahar Rd, Koovapadam, Fort Kochi, 682001"
+                autocomplete="off"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+    </section>
+
+    <footer class="section-footer">
+      <div class="wrapper">
+        <div class="footer-contents">
+          <div class="footer-image-wrapper">
+            <img src="../Images/logo.png" alt="NSS Logo" class="footer-image" />
+            <p class="footer-image-description">NSS കരയോഗം 2565 ഏരൂർ</p>
+          </div>
+
+          <div class="footer-text-wrapper">
+            <p class="footer-title">About Us</p>
+            <ul class="footer-links">
+              <li>
+                <a href="../index.html#section-vision" class="footer-link"
+                  >Our Vision</a
+                >
+              </li>
+
+              <li>
+                <a href="../index.html#section-journey" class="footer-link"
+                  >Our Journey</a
+                >
+              </li>
+
+              <li>
+                <a href="../index.html#section-contacts" class="footer-link"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-text-wrapper">
+            <p class="footer-title">Other Resources</p>
+            <ul class="footer-links">
+              <li>
+                <a href="#" class="footer-link">User Registration</a>
+              </li>
+
+              <li>
+                <a href="gallery.html" class="footer-link">Gallery</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="copy-wrapper">
+            <p class="copy">&copy; 2025 NSS Eroor. All Right Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Adding External Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script type="module" src="../Scripts/navigation.js"></script>
+    <script type="module" src="../Scripts/registration.js"></script>
+  </body>
+</html>

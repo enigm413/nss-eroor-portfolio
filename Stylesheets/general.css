@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Anek Malayalam", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font-size: 1.6rem;
+  color: #110000;
+}
+
+.wrapper {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding-bottom: 6.4rem;
+}
+
+.heading--primary {
+  font-size: 4.8rem;
+  padding-bottom: 3.2rem;
+}
+
+.heading--secondary {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  padding-bottom: 3.2rem;
+  text-align: center;
+  color: #a60303;
+}
+
+.login-popup {
+  background-color: #fff;
+  color: #110000;
+  padding: 3.2rem 2.4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -10%);
+  width: 40%;
+  z-index: 1;
+  border-radius: 2rem;
+  box-shadow: 0 0.8rem 2.4rem rgba(17, 0, 0, 0.9);
+  display: none;
+}
+
+.login-popup-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pass-key-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.pass-key-label {
+  font-size: 1.9rem;
+}
+
+.pass-key-input {
+  font-size: 1.6rem;
+  height: 2rem;
+  border: 0.8px solid #110000;
+  border-radius: 0.4rem;
+  padding: 2.4rem;
+  letter-spacing: 2rem;
+}
+
+.pass-key-error {
+  color: #af1c1c;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pass-key-submit-btn {
+  background-color: #d03923;
+  border: none;
+  padding: 1.2rem 9.6rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pass-key-close-btn {
+  font-size: 2.4rem;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: #db9a9a;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 50%);
+}
+
+.display--none {
+  display: none !important;
+}
+
+.display--flex {
+  display: flex !important;
+}
+
+.visibility--visible {
+  visibility: visible !important;
+}
+
+.disabled-btn {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
+.grid-col--span {
+  grid-column: span 2;
+}
