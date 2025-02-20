@@ -126,7 +126,7 @@ function validateInput(val, inputEl, str) {
 async function handleDataSubmission(data) {
   try {
     const response = await fetch(
-      "https://api.apico.dev/v1/Gov1mb/130-p84nbnMlwQ9-uklZhojiFRKq22hCJ8mWoZXpRZVo/values/User_Data:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS&includeValuesInResponse=true",
+      "https://api.apico.dev/v1/9u06Rf/130-p84nbnMlwQ9-uklZhojiFRKq22hCJ8mWoZXpRZVo/values/User_Data:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS&includeValuesInResponse=true",
       {
         method: "POST",
         headers: {
@@ -186,7 +186,11 @@ userRegFormEl.addEventListener("submit", async (event) => {
 
   if (!isError) {
     const formdata = new FormData(userRegFormEl);
-    const newUserData = ["", ...formdata.values(), "", "", "Pending"];
+    const trimmedFormData = [...formdata.values()].map((val) => {
+      return val.trim();
+    });
+    console.log(trimmedFormData);
+    const newUserData = ["", ...trimmedFormData, "", "", "Pending"];
     handleDataSubmission(newUserData);
     event.target.reset();
   }
