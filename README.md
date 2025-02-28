@@ -4,13 +4,15 @@
 
 This website serves as the official portfolio website of Nair Service Society at Eroor Branch, a non-profit organization dedicated to preserving and promoting the rich cultural heritage, traditions, and values of the Nair community. Our goal is to provide visitors with an overview of our initiatives, impact, and ways to get involved.
 
+![Screenshot Of Hero Section](./screenshot.webp)
+
 ## Description
 
 This portfolio website highlights the key aspects of Nair Service Society at Eroor Branch, including its history, cultural events, social initiatives, and community programs. It serves as a digital platform to connect with members, supporters, and those interested in learning about the Nair community.
 
 ## Usage
 
-Explore the NSS Eroor Branch portfolio, view events, and register for community initiatives: V[Visit Website](https://nsseroor2565.vercel.app/)
+Explore the NSS Eroor Branch portfolio, view events, and register for community initiatives: [Visit Website](https://nsseroor2565.vercel.app/)
 
 ## Website Sections
 
