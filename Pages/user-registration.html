@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="../Stylesheets/queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="Images" href="../Images/logo.png" />
+    <link rel="icon" type="image/png" href="../Images/logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&display=swap"
       rel="stylesheet"
     />
-    
   </head>
 
   <body>
@@ -70,7 +69,6 @@
                 id="user-name"
                 class="text-validation"
                 name="username"
-                placeholder="Raghav Menon"
                 autocomplete="off"
                 required
               />
@@ -85,7 +83,6 @@
                 id="mail"
                 name="mail"
                 class="text-validation"
-                placeholder="raghav123@gmail.com"
                 autocomplete="off"
                 required
               />
@@ -93,13 +90,12 @@
             </div>
 
             <div class="input-wrapper">
-              <label for="username" class="input-label">Age</label>
+              <label for="age" class="input-label">Age</label>
               <input
                 type="text"
                 id="age"
                 class="text-validation"
                 name="age"
-                placeholder="23"
                 autocomplete="off"
                 required
               />
@@ -113,23 +109,27 @@
                 <div class="radio-input-item">
                   <input
                     type="radio"
-                    id="gender"
+                    id="gender-male"
                     name="gender"
                     value="male"
                     class="radio-input"
                     checked
                   />
-                  <label for="gender" class="radio-input-label">Male</label>
+                  <label for="gender-male" class="radio-input-label"
+                    >Male</label
+                  >
                 </div>
 
                 <div class="radio-input-item">
                   <input
                     type="radio"
-                    id="gender"
+                    id="gender-female"
                     name="gender"
                     class="radio-input"
                   />
-                  <label for="gender" class="radio-input-label">Female</label>
+                  <label for="gender-female" class="radio-input-label"
+                    >Female</label
+                  >
                 </div>
               </div>
             </div>
@@ -141,7 +141,6 @@
                 id="contact"
                 name="contact"
                 class="text-validation"
-                placeholder="9646461274"
                 autocomplete="off"
                 required
               />
@@ -157,7 +156,6 @@
                 id="current-address"
                 class="text-validation"
                 name="current-address"
-                placeholder="Behind Lulu Mall, Nethaji Nagar, Edappally, 682024"
                 required
               />
               <p class="error-message"></p>
@@ -170,7 +168,6 @@
                 id="job"
                 class="text-validation"
                 name="job-title"
-                placeholder="Full Stack Web Developer"
                 autocomplete="off"
                 required
               />
@@ -184,7 +181,6 @@
                 id="company"
                 class="text-validation"
                 name="company"
-                placeholder="TATA Consulatncy Service"
                 autocomplete="off"
                 required
               />
@@ -203,7 +199,6 @@
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
               </select>
-              <option value=""></option>
             </div>
 
             <div class="input-wrapper">
@@ -213,7 +208,6 @@
                 id="father-name"
                 class="text-validation"
                 name="father-name"
-                placeholder="Rajeev S Menon"
                 autocomplete="off"
                 required
               />
@@ -227,7 +221,6 @@
                 id="mother-name"
                 class="text-validation"
                 name="mother-name"
-                placeholder="Saritha S Menon"
                 autocomplete="off"
                 required
               />
@@ -241,7 +234,6 @@
                 id="spouse-name"
                 class="text-validation"
                 name="spouse-name"
-                placeholder="Viswanath"
                 autocomplete="off"
               />
               <p class="error-message"></p>
@@ -256,7 +248,6 @@
                 id="prev-address"
                 name="prev-address"
                 class="text-validation"
-                placeholder="Jawahar Rd, Koovapadam, Fort Kochi, 682001"
                 autocomplete="off"
               />
               <p class="error-message"></p>
@@ -265,6 +256,7 @@
             <button type="submit" class="submit-btn">Submit</button>
           </div>
         </form>
+      </div>
     </section>
 
     <footer class="section-footer">

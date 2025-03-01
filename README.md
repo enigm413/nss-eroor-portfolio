@@ -76,9 +76,9 @@ When the admin updates the registration status, the system automatically sends a
 
 When an admin uploads files to a folder (named after the unique ID of an entry), the system automatically updates the file URLs in Google Sheets every 5 minutes, ensuring real-time access to uploaded documents.
 
-## ## License
+## License
 
-This project is **exclusively licensed** to **[Client's Name] (NSS Eroor 2565)**.  
+This project is **exclusively licensed** to **NSS Eroor 2565**.  
 Unauthorized use, distribution, or modification is **strictly prohibited**.
 
 📜 See the [LICENSE](./LICENSE) file for full terms.
